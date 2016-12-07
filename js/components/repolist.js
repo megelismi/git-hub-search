@@ -8,10 +8,11 @@ function RepoList(props) {
 	} 
 
 	data = data.map((data) => {
+		let date = new Date (data.created_at);
 		return (
 			<tr key={data.id}>
 				<td>{data.name}</td>
-				<td>{data.created_at}</td>
+				<td>{date.toLocaleDateString()}</td>
 				<td>{data.description}</td>
 				<td>{data.forks}</td>
 				<td>{data.open_issues_count}</td>
@@ -24,7 +25,7 @@ function RepoList(props) {
 	console.log(data);
 
   return (
-	<table>
+	<table className="repo-table">
 	  <tr>
 	    <th>Repo Name</th>
 	    <th>Date Created</th>

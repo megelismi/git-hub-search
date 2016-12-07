@@ -1,6 +1,7 @@
 import React from 'react';
 import SearchBox from './searchbox';
 import RepoList from './repolist';
+import BasicInfo from './basicinfo';
 
 //stateful component
 export default class App extends React.Component {
@@ -36,9 +37,8 @@ export default class App extends React.Component {
 	render() {
 		return(
       <div>
-        <SearchBox onSubmit={this.onSearchSubmit}
-          onChange={this.onAddInputChange} />
-          <div>{this.state.userPage}</div>
+        <SearchBox onSubmit={this.onSearchSubmit} onChange={this.onAddInputChange} />
+        <BasicInfo avatar={this.state.avatar} userPage={this.state.userPage} data={this.state.data} />
         <RepoList data={this.state.data}/>
       </div>
 		)
