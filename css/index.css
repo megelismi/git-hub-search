@@ -5,11 +5,59 @@ table {
 }
 
 td, th {
-    border: 1px solid #dddddd;
+    border: 1px solid #A4C5D5;
     text-align: left;
     padding: 8px;
 }
 
 tr:nth-child(even) {
-    background-color: #dddddd;
+    background-color: #A4C5D5;
 }
+
+body {
+	font-family: 'Inconsolata', monospace;
+	text-align: center;
+}
+
+h2 {
+	margin-top: 0;
+	margin-bottom: 10px;
+	font-family: 'VT323', monospace;
+	font-size: 2.5em;
+}
+
+.basic-info {
+	border-radius: 4px;
+	width: 30%;
+	margin: 0 auto;
+	text-align: center;
+	padding: 10px;
+	margin-bottom: 15px;
+	margin-top: 30px;
+}
+
+.avatar {
+	border-radius: 50%;
+	width: 100px;
+}
+
+.user-form {
+	margin: 0 auto;
+   width:205px;
+}
+
+.user-input-box {
+	width: 200px;
+	height: 18px;
+	border-radius: 4px;
+	border: solid gray 1.5px;
+	font-size: 12px;
+	padding: 3px;
+}
+
+.submit-button {
+	margin-top: 10px;
+   width: 70px;
+   font-size: 20px;
+}
+

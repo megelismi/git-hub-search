@@ -37,6 +37,7 @@ export default class App extends React.Component {
 	render() {
 		return(
       <div>
+      	<h1 className="main-header">GitHub Search App</h1>
         <SearchBox onSubmit={this.onSearchSubmit} onChange={this.onAddInputChange} />
         <BasicInfo avatar={this.state.avatar} userPage={this.state.userPage} data={this.state.data} />
         <RepoList data={this.state.data}/>

@@ -4,7 +4,7 @@ function RepoList(props) {
 	let {data} = props;
 
 	if (data.length === 0) {
-		return <div>Loading...</div>
+		return <div></div>
 	} 
 
 	data = data.map((data) => {

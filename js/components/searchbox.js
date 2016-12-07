@@ -10,12 +10,9 @@ function SearchBox(props) {
 	}
 
 	return (
-		<form onSubmit={grabInput}>
-      <label>
-        Search Github User:
-  			<input type="text" placeholder="search..." ref={element => inputBox = element} />
-      </label>
-			<input type="submit" value="Submit" />
+		<form className="user-form" onSubmit={grabInput}>
+  			<input className="user-input-box" type="text" placeholder="search..." ref={element => inputBox = element} />
+			<input className="submit-button" type="submit" value="Submit" />
 		</form>
 	)
 }
