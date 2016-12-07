@@ -32,6 +32,9 @@ export default class App extends React.Component {
 		      userPage: userPage
 	    	});
     	})
+    	.catch((e) => {
+	   	console.log(e);
+    	})
 	}
 
 	render() {

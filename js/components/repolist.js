@@ -26,16 +26,20 @@ function RepoList(props) {
 
   return (
 	<table className="repo-table">
-	  <tr>
-	    <th>Repo Name</th>
-	    <th>Date Created</th>
-	    <th>Description</th>
-	    <th>Forks</th>
-	    <th>Issues</th>
-	    <th>Followers</th>
-	    <th>Stargazers</th>
-	  </tr>
-	 	{data}
+		<thead>
+		  <tr>
+		    <th>Repo Name</th>
+		    <th>Date Created</th>
+		    <th>Description</th>
+		    <th>Forks</th>
+		    <th>Issues</th>
+		    <th>Followers</th>
+		    <th>Stargazers</th>
+		  </tr>
+		 </thead>
+		 <tbody>
+		 	{data}
+		 </tbody>
 	</table>
   );
 }
