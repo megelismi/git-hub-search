@@ -7,31 +7,30 @@ export default class App extends React.Component {
 	constructor(props) {
 		super(props);
 
-    this.state = {
+   this.state = {
       data: [],
       avatar: "",
       userPage: ""
     }
-    
-		this.onSearchSubmit = this.onSearchSubmit.bind(this);
+
+	this.onSearchSubmit = this.onSearchSubmit.bind(this);
 	}
 
 	onSearchSubmit(textInput) {
-    fetch(`https://api.github.com/users/${textInput}/repos`)
-    .then((response) => {
-      return response.json();
-    })
-    .then((body) => {
-      let avatar = body[0].owner.avatar_url;
-      let userPage = body[0].owner.html_url;
+	   fetch(`https://api.github.com/users/${textInput}/repos`)
+	   .then((response) => {
+	   	return response.json();
+	   })
+	   .then((body) => {
+	      let avatar = body[0].owner.avatar_url;
+	      let userPage = body[0].owner.html_url;
 
-
-    this.setState({
-        data: body,
-        avatar: avatar,
-        userPage: userPage
-      });
-    })
+	    	this.setState({
+		      data: body,
+		      avatar: avatar,
+		      userPage: userPage
+	    	});
+    	})
 	}
 
 	render() {
@@ -40,7 +39,7 @@ export default class App extends React.Component {
         <SearchBox onSubmit={this.onSearchSubmit}
           onChange={this.onAddInputChange} />
           <div>{this.state.userPage}</div>
-        <RepoList />
+        <RepoList data={this.state.data}/>
       </div>
 		)
 	}
