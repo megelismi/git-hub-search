@@ -22,7 +22,7 @@ body {
 h2 {
 	margin-top: 0;
 	margin-bottom: 10px;
-	font-family: 'VT323', monospace;
+/*	font-family: 'VT323', monospace;*/
 	font-size: 1.8em;
 }
 
@@ -60,4 +60,18 @@ h2 {
    width: 70px;
    font-size: 20px;
 }
+
+
+a p {
+	display: none;
+}
+
+a:hover p {
+	display: block;
+}
+
+a:hover {
+	display:block;
+}
+
 
